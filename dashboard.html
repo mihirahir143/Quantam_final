@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Fonts Pre Connect -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts Links (Roboto 400, 500 and 700 included) -->
+
+  <!-- CSS Files Links -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Title -->
+  <title>Quantum Dashboard</title>
+  <script>
+    function myFunction() {
+  var x = document.querySelector(".topnav");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+  </script>
+</head>
+
+<body>
+  
+  <header>
+    <div class="header">
+      <img class="logo_header" src="./Assets/logo used in header.svg" />
+    </div>
+    <div class="navbaar">
+      <a href="#" class="selected desktop_only">DASHBOARD</a>
+      <a href="#" class="desktop_only">Content</a>
+      <a href="#" class="desktop_only">USERS</a>
+      <a href="#" class="desktop_only">REPORTS</a>
+      <a href="#" class="desktop_only"> ADMIN</a>
+      <a href="#"><img id="alert" src="./Assets/alerts.svg" /><span class="badge">2</span></a>
+      <a href="#"
+            ><img id="announcement" src="./Assets/announcements.svg" />
+          </a>
+          <a href="#"><img src="./Assets/account_circle.svg" /> </a>
+     
+      <div id="hamburger" class="hamburger">
+        <div class="line line 1"></div>
+        <div class="line line 2"></div>
+        <div class="line line 3"></div>
+      </div>
+
+      <div class="hamburger-menu" id="hamburger-menu">
+        <div class="nav-items">
+          <li>DASHBOARD</li>
+          <li>CONTENT
+            <ul class="sub-menu">COURSE CATALOG</ul>
+          </li>
+          <li>USERS
+            <ul id="u1" class="sub-menu">USER 1</ul>
+          </li>
+          <li>REPORTS
+            <ul class="sub-menu">REPORT 1</ul>
+          </li>
+          <li>ADMIN
+            <ul class="sub-menu">ADMIN</ul>
+          </li>
+        </div>
+      </div>
+      <div id="alert_wrapper" class="alert_wrapper">
+        <div id="alert_list" class="alert-list">
+
+        </div>
+        <div class="btn">SHOW ALL</div>
+      </div>
+
+      <div id="announcement_wrapper" class="announcement_wrapper">
+        <div id="announcement_list" class="announcement-list">
+
+        </div>
+        <div class="announcement_btn">
+          <span>SHOW ALL</span>&nbsp;|&nbsp;<span>CREATE NEW</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <div class="toggle_category">
+      <div class="courses"><img src="./Assets/courses.svg" />Courses</div>
+      <div class="classes"><img src="./Assets/classes.svg" />Classes</div>
+    </div>
+    <div class="info_filter">
+      <p>Showing 4 of 4 courses</p>
+      <p>
+        Sort By:
+        <span> Course Name <img src="./Assets/arrow-down.svg" /> </span>
+        <img src="./Assets/sort.svg" />
+      </p>
+    </div>
+    <hr />
+    <div class="card_grid" id="card_grid">
+      <script defer type="module" src="new.js"></script>
+      <!-- <div class="card">
+        <div class="card_upper">
+          <img src="./Assets/imageMask-1.svg" />
+          <div class="card_upper_right">
+            <div class="card_heading">
+              <h3>Acceleration</h3>
+              <img src="./Assets/favourite.svg" />
+            </div>
+            <small class="text-muted">Physics &nbsp; | &nbsp; Grade 7</small>
+            <small class="text-muted"><b>4</b> Units &nbsp;<b>18</b> Lessons&nbsp;
+              <b>24</b> Topics</small>
+            
+              <select name="classes" id="classes">
+                <option value="Mr. Frank's Class B">Mr Frank's Class B</option>
+              </select>
+            
+            <small class="text-muted">50 Students &nbsp; | &nbsp;21-Jan-2020 - 21-Aug-2020</small>
+          </div>
+        </div>
+        <hr />
+        <div class="card_footer">
+          <img src="./Assets/preview.svg" />
+          <img src="./Assets/manage course.svg" />
+          <img src="./Assets/grade submissions.svg" />
+          <img src="./Assets/reports.svg" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card_upper">
+          <img src="./Assets/imageMask-1.svg" />
+          <div class="card_upper_right">
+            <div class="card_heading">
+              <h3>Acceleration</h3>
+              <img src="./Assets/favourite.svg" />
+            </div>
+            <small class="text-muted">Physics &nbsp; | &nbsp; Grade 7</small>
+            <small class="text-muted"><b>4</b> Units &nbsp;<b>18</b> Lessons&nbsp;
+              <b>24</b> Topics</small>
+              <select name="classes" id="classes">
+                <option value="Mr. Frank's Class B">Mr Frank's Class B</option>
+              </select>
+            <small class="text-muted">50 Students &nbsp; | &nbsp;21-Jan-2020 - 21-Aug-2020</small>
+          </div>
+        </div>
+        <hr />
+        <div class="card_footer">
+          <img src="./Assets/preview.svg" />
+          <img src="./Assets/manage course.svg" />
+          <img src="./Assets/grade submissions.svg" />
+          <img src="./Assets/reports.svg" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card_upper">
+          <img src="./Assets/imageMask-1.svg" />
+          <div class="card_upper_right">
+            <div class="card_heading">
+              <h3>Acceleration</h3>
+              <img src="./Assets/favourite.svg" />
+            </div>
+            <small class="text-muted">Physics &nbsp; | &nbsp; Grade 7</small>
+            <small class="text-muted"><b>4</b> Units &nbsp;<b>18</b> Lessons&nbsp;
+              <b>24</b> Topics</small>
+              <select name="classes" id="classes">
+                <option value="Mr. Frank's Class B">Mr Frank's Class B</option>
+              </select>
+            <small class="text-muted">50 Students &nbsp; | &nbsp;21-Jan-2020 - 21-Aug-2020</small>
+          </div>
+        </div>
+        <hr />
+        <div class="card_footer">
+          <img src="./Assets/preview.svg" />
+          <img src="./Assets/manage course.svg" />
+          <img src="./Assets/grade submissions.svg" />
+          <img src="./Assets/reports.svg" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card_upper">
+          <img src= />
+          <div class="card_upper_right">
+            <div class="card_heading">
+              <h3>Acceleration</h3>
+              <img src="./Assets/favourite.svg" />
+            </div>
+            <small class="text-muted">Physics &nbsp; | &nbsp; Grade 7</small>
+            <small class="text-muted"><b>4</b> Units &nbsp;<b>18</b> Lessons&nbsp;
+              <b>24</b> Topics</small>
+              <select name="classes" id="classes">
+                <option value="Mr. Frank's Class B">Mr Frank's Class B</option>
+              </select>
+            <small class="text-muted">50 Students &nbsp; | &nbsp;21-Jan-2020 - 21-Aug-2020</small>
+          </div>
+        </div>
+        <hr />
+        <div class="card_footer">
+          <img src="./Assets/preview.svg" />
+          <img src="./Assets/manage course.svg" />
+          <img src="./Assets/grade submissions.svg" />
+          <img src="./Assets/reports.svg" />
+        </div>
+      </div> -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="upper_footer">
+      <a>About </a>
+      <span>&nbsp;|&nbsp;</span>
+      <a> Contact Us</a>
+    </div>
+    <div class="lower_footer">
+      <img src="/Assets/logo used in footer.svg" />
+      <div class="text-muted">&nbsp;|&nbsp;</div>
+      <small>
+        Copyright © 2020-2021 <b>Zeus Systems Pvt. Ltd.</b> All rights
+        reserved.</small>
+    </div>
+  </footer>
+  
+  <noscript>Your browser don't support JavaScript!</noscript>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>
